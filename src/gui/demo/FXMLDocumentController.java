@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 
 /**
@@ -25,6 +26,9 @@ public class FXMLDocumentController implements Initializable {
     @FXML private ChoiceBox choiceBox;
     @FXML private Label choiceBoxLabel;
     
+    // These are for the ComboBox example
+    @FXML private ComboBox comboBox;
+    @FXML private Label comboBoxLabel;
     
     // This will update the Label for the ChoiceBox
     public void choiceBoxButtonPushed()
@@ -57,6 +61,10 @@ public class FXMLDocumentController implements Initializable {
         choiceBoxLabel.setText("");
         choiceBox.getItems().addAll("apples","pears","oranges","strawberries","bananas");
         choiceBox.setValue("apples");
+        
+        // This configures the ComboBox
+        comboBox.getItems().addAll("COMP1030","COMP1008","MGMT2003","MGMT2010");
+        
     }    
     
 }
